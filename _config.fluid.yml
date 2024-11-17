@@ -97,7 +97,6 @@ ignore:
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
 theme: fluid
-banner_img: /img/bg/1.jpg
 about:
   avatar: /img/ava.png
   name: "Kravorn"
@@ -108,6 +107,7 @@ about:
     #- { class: 'iconfont icon-wechat-fill', qrcode: '/img/favicon.png' }
 
 index:
+  banner_img: /img/1.png
   slogan:
     enable: true
     text: talk is cheap, show me the code
