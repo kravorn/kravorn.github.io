@@ -97,7 +97,6 @@ ignore:
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
 theme: fluid
-banner_img: /img/bg.jpg
 about:
   avatar: /img/avatar.png
   name: "Kravorn"
