@@ -7,6 +7,8 @@ tags:
   - LLM
   - one-api
   - OpenAI
+categories:
+  - 记录
 ---
 ![](/img/2-1.jpg)
 
