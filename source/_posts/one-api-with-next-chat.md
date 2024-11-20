@@ -3,6 +3,10 @@ title: 【记录】在软路由上聚合及使用LLMs
 layout: post
 index_img: /img/2-1.jpg
 date: 2024-11-18 00:17:12
+tags:
+  - LLM
+  - one-api
+  - OpenAI
 ---
 ![](/img/2-1.jpg)
 
@@ -55,8 +59,3 @@ docker run --name chat-next-web -d \
 - `对话摘要模型`改为便宜的, 否则会默认使用最贵的模型来生成标题。
 
 最后，打开`ip:3001`就可以愉快地和LLMs对话了。
-
-tags:
-  - LLM
-  - one-api
-  - OpenAI
