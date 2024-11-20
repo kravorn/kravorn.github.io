@@ -99,6 +99,7 @@ ignore:
 theme: fluid
 about:
   avatar: /img/ava.png
+  banner_img: /img/1.jpg
   name: "Kravorn"
   intro: "这是一个写字的地方"
   icons:
