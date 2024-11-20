@@ -22,21 +22,21 @@ docker run --name one-api -d --restart always \
 
 其中，`-p 3000:3000`中的第一个`3000`是宿主机的端口，可以根据需要进行修改。数据和日志将会保存在宿主机的`/home/debian/data/one-api`目录，请确保该目录存在且具有写入权限，或者更改为合适的目录。
 
-部署完成后，通过软路由的ip:3000即可访问one-api的界面。
+部署完成后，通过软路由的`ip:3000`即可访问one-api的界面。
 
 ## Openrouter
 [OpenRouter](https://openrouter.ai)为大量LLMs提供了兼容OpenAI的API。在其中创建key之后，回到one-api的界面创建新的渠道，模型重定向可以参考我的设置。之后添加新的令牌，通过令牌即可访问我们在OpenRouter中的大模型。
 
 <div style="display: flex; justify-content: space-between;">
-    <img src="/img/2-2.png" alt="Image 1" style="width: 49%;">
-    <img src="/img/2-3.png" alt="Image 2" style="width: 49%;">
+    <img src="/img/2-2.png" alt="Image 1" style="width: 100%;">
+    <img src="/img/2-3.png" alt="Image 2" style="width: 100%;">
 </div>
 
 当然，one-api中还可以添加HuggingFace等等地方LLMs的api。
 
 
 
-## Next-Chat的安装与配置
+## Next-Chat的部署与配置
 - [Next-Chat](https://github.com/ChatGPTNextWeb/ChatGPT-Next-Web)
 
 建议同样使用docker进行部署，
@@ -53,4 +53,4 @@ docker run --name chat-next-web -d \
 - 在自定义模型中注意不能忘记`@`，如`-all,+claude-3.5-sonnet@OpenRouter,+claude-3.5-haiku@OpenRouter`，
 - `对话摘要模型`改为便宜的, 否则会默认使用最贵的模型来生成标题。
 
-最后，打开ip:3001就可以愉快地和LLMs对话了。
+最后，打开`ip:3001`就可以愉快地和LLMs对话了。
