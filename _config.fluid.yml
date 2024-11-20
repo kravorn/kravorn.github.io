@@ -111,10 +111,13 @@ index:
   banner_img: /img/1.jpg
   slogan:
     enable: true
-    text: talk is cheap, show me the code
+    text: Waifu Oriented Programming
 fun_features:
   typing: # 为 subtitle 添加打字机效果
-    enable: false
+    enable: true
+    typeSpeed: 70 # 打印速度
+    cursorChar: "_" # 游标字符
+    loop: false # 是否循环播放效果
 post:
   banner_img: /img/1.jpg
 
