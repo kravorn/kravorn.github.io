@@ -114,6 +114,9 @@ index:
 fun_features:
   typing: # 为 subtitle 添加打字机效果
     enable: false
+post:
+  banner_img: /img/1.jpg
+
 
 navbar:
   blog_title: Kravorn's Blog
