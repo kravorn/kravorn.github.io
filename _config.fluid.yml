@@ -107,7 +107,7 @@ about:
     #- { class: 'iconfont icon-wechat-fill', qrcode: '/img/favicon.png' }
 
 index:
-  banner_img: /img/1.png
+  banner_img: /img/1.jpg
   slogan:
     enable: true
     text: talk is cheap, show me the code
