@@ -34,10 +34,10 @@ docker run --name one-api -d --restart always \
 ## Openrouter
 [OpenRouter](https://openrouter.ai)为大量LLMs提供了兼容OpenAI的API。在其中创建key之后，回到one-api的界面创建新的渠道，模型重定向可以参考我的设置。之后添加新的令牌，通过令牌即可访问我们在OpenRouter中的大模型。
 
-<div style="display: flex; justify-content: space-between;">
-    <img src="/img/2-2.png" alt="Image 1" style="width: 100%;">
-    <img src="/img/2-3.png" alt="Image 2" style="width: 100%;">
-</div>
+{% gi 2 2 %}
+  ![](/img/2-2.png)
+  ![](/img/2-3.png)
+{% endgi %}
 
 
 当然，one-api中还可以添加HuggingFace等等地方LLMs的api。
