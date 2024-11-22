@@ -109,7 +109,7 @@ docker run -d -p 8080:8080 \
 ```
 
 
-#### 其他
+### 其他
 - 想要追求全自动化，可以使用NASTool之类的工具，这里不做介绍。
 - 如果想在重命名、移动文件的情况下保种，必须借助硬链接，可以使用[hlink](https://github.com/likun7981/hlink)，这里不做介绍。
 
@@ -129,4 +129,5 @@ docker run -d --name peerbanhelper --stop-timeout 15 -p 9898:9898 -v ${PWD}/:/ap
 推荐[mpv-lazy](https://github.com/hooke007/MPV_lazy)，可以大幅优化初次使用的体验。
 
 ## potplayer
-推荐potplayer+lavfilters+madvr以获得最佳观影体验，可以参考[此教程](https://vcb-s.com/archives/7228/comment-page-10)，如果想深入调教，可以参考这篇[文章](https://lysandria1985.blogspot.com/2013/01/3-madvr.html)。
+- 推荐potplayer+lavfilters+madvr以获得最佳观影体验，可以参考[此教程](https://vcb-s.com/archives/7228/comment-page-10)，如果想深入调教，可以参考这篇[文章](https://lysandria1985.blogspot.com/2013/01/3-madvr.html)。
+- 在jellyfin里调用potplayer可以使用[embyToLocalPlayer](https://github.com/kjtsune/embyToLocalPlayer)。
