@@ -2,7 +2,7 @@
 title: 【探索】Jellyfin观影不完全指北
 layout: post
 index_img: /img/3-1.jpg
-date: 2024-11-22 23:57:12
+date: 2024-11-22 22:55:12
 tags:
   - Jellyfin
   - mpv
