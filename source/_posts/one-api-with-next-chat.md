@@ -11,9 +11,13 @@ categories:
   - 记录
 ---
 
-现在最先进的LLMs在访问和付费上都不方便，同时开源的LLMs动辄上百B的参数也使得本地部署几乎不可能。因此通过one-api和NextChat等工具部署一个可以访问各种LLMs的工具是一个不错的选择，而部署在软路由上可以让局域网内所有设备都可以轻松访问LLMs。
+现在最先进的LLMs在访问和付费上都不方便，同时开源的LLMs动辄上百B的参数量也使得本地部署几乎不可能。因此通过one-api和NextChat等工具部署一个可以访问各种LLMs的工具是一个不错的选择，而部署在软路由上可以让局域网内所有设备都可以轻松访问LLMs。当然，部署在电脑上的方法也是一样的。
 
 ![](/img/2-1.jpg)
+
+## 前期准备
+- [Docker](https://www.docker.com/get-started/)
+- 一张美元信用卡
 
 ## 部署one-api
 [one-api](https://github.com/songquanpeng/one-api) 是 OpenAI 接口管理 & 分发系统，支持 Azure、Anthropic Claude、Google PaLM 2 & Gemini、智谱ChatGLM、百度文心一言、讯飞星火认知、阿里通义千问、360智脑以及腾讯混元，可用于二次分发管理key。
