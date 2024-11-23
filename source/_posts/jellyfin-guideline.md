@@ -34,6 +34,8 @@ docker run -d \
 另外，推荐完全放弃在宿主机上解码，在 用户设置 > 媒体播放 里，**仅**勾选`允许播放媒体`，让客户端来进行解码，毕竟现在手机都可以软解4K了。
 
 ### 常用插件
+
+#### 二次元
 对于一般使用来说，自带的TMDB插件已经足够，不过对于看番来说，还需要一个[Bangumi](https://github.com/kookxiang/jellyfin-plugin-bangumi)，
 
 - 进入 Jellyfin 控制台 > 插件目录/存储库 > 设置，点击添加
@@ -94,6 +96,8 @@ docker run -d -p 8080:8080 \
 字母-数字，可以一部一个文件夹，也可以把所有视频文件都放在一个文件夹内。
 
 ### 播放器
+
+#### 电脑端
 推荐使用[jellyfin-mpv-shim](https://github.com/jellyfin/jellyfin-mpv-shim)调用外部配置好的mpv播放器，jellyfin-mpv-shim中需要修改的conf.json设置如下：
 
 ```json
@@ -107,6 +111,9 @@ docker run -d -p 8080:8080 \
 "thumbnail_enable": false,
 "thumbnail_osc_builtin": false,
 ```
+
+#### IPhone/IPad
+推荐[Swiftfin](https://github.com/jellyfin/Swiftfin)。
 
 
 ### 其他
