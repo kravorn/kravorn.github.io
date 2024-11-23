@@ -94,11 +94,24 @@ docker run -d -p 8080:8080 \
 
 #### 1.2.2 ???
 - 字母-数字，可以一部一个文件夹，也可以把所有视频文件都放在一个文件夹内。
+```tree
+???[第一种方法]
+├── xx-xx1.mp4
+└── xx-xx2.mp4
+
+???[第二种方法]
+├── xx-xx1
+│   └── xx-xx1.mp4
+└── xx-xx2
+    └── xx-xx2.mp4
+```
 
 ### 1.3 播放器
 
 #### 1.3.1 电脑端
-推荐使用[jellyfin-mpv-shim](https://github.com/jellyfin/jellyfin-mpv-shim)调用外部配置好的mpv播放器，jellyfin-mpv-shim中需要修改的conf.json设置如下：
+推荐使用[jellyfin-mpv-shim](https://github.com/jellyfin/jellyfin-mpv-shim)调用外部配置好的mpv播放器，启动jellyfin-mpv-shim后，在浏览器中打开`ip:8096`，就可以选择其作为默认播放方法。
+
+jellyfin-mpv-shim中需要修改的conf.json设置如下：
 
 ```json
 "enable_gui": false,
@@ -123,6 +136,25 @@ docker run -d -p 8080:8080 \
 
 ## 2 BT下载
 推荐使用[增强版qbittorrent](https://github.com/c0re100/qBittorrent-Enhanced-Edition)，同时搭配[PeerBanHelper](https://github.com/PBH-BTN/PeerBanHelper)，防止国内流氓软件吸血。
+
+- qbittorrent安装
+
+```bash
+docker run \
+  --name=qbittorrent \
+  -e QB_WEBUI_PORT=8989 \
+  -e QB_EE_BIN=false \
+  -e UID=1000 \
+  -e GID=1000 \
+  -e UMASK=022 \
+  -p 6881:6881 \
+  -p 6881:6881/udp \
+  -p 8989:8989 \
+  -v /配置文件位置:/config \
+  -v /下载位置:/Downloads \
+  --restart unless-stopped \
+  johngong/qbittorrent:latest
+```
 
 - PeerBanHelper安装：
 
