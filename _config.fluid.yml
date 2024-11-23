@@ -118,6 +118,7 @@ fun_features:
     typeSpeed: 80 # 打印速度
     cursorChar: "_" # 游标字符
     loop: false # 是否循环播放效果
+    scope: [home,tag,category,about]
 post:
   banner_img: /img/1.jpg
 
