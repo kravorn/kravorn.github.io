@@ -1,5 +1,5 @@
 ---
-title: 【探索】通过AES加密HuggingFace space中的敏感文件
+title: 【探索】通过AES加密HF space中的敏感文件
 layout: post
 index_img: /img/4-1.jpg
 date: 2024-11-24 23:55:12
@@ -67,7 +67,6 @@ if __name__ == "__main__":
 ```python
 import os
 import base64
-import pickle
 from Crypto.Cipher import AES
 from Crypto.Util.Padding import unpad
 import streamlit as st
