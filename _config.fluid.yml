@@ -101,7 +101,7 @@ about:
   avatar: /img/ava.png
   banner_img: /img/1.jpg
   name: "Kravorn"
-  intro: "麻醉/AI/二次元"
+  intro: "Talk is cheap, show me the code."
   icons:
     - { class: 'iconfont icon-github-fill', link: 'https://github.com/kravorn', tip: 'GitHub' }
     #- { class: 'iconfont icon-douban-fill', link: 'https://douban.com', tip: '豆瓣' }
