@@ -1,5 +1,5 @@
 ---
-title: 【探索】通过AES加密HF space中的敏感文件
+title: 【探索】通过AES加密HF Space中的敏感文件
 layout: post
 index_img: /img/4-1.jpg
 date: 2024-11-24 23:38:12
@@ -10,7 +10,7 @@ categories:
   - 探索
 ---
 
-经常需要通过demo来展示一些小模型，HuggingFace的Space是用的最顺手的，但是有时候一些特殊的文件不方便完全开源在HF中。和Limour交流之后，他提出了一种借助Space中隐私环境变量的方法：使用AES加密文件，使用时再解密。
+经常需要通过demo来展示一些小模型，HuggingFace的Space是用的最顺手的，但是有时候一些特殊的文件不方便完全开源在HF中。和Limour交流之后，他提出了一种借助Space中Secrets的方法：使用AES加密文件，密钥存在Secrets中，使用时再解密。
 
 ![](/img/4-1.jpg)
 
