@@ -14,6 +14,10 @@ categories:
 
 ![](/img/4-1.jpg)
 
+## update
+
+后续发现将模型文件放置在私人`Model`中，然后通过存在Secrets中的hf-key访问更加方便。
+
 ## AES加密
 
 ```python
