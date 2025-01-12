@@ -13,4 +13,4 @@ categories:
 
 之前将istoreos作为家庭服务器的系统，在上面装了mihomo和qbittorrent，但是长时间挂着qbittorrent会导致会有上万条连接经过mihomo的内核，进而吃掉大量内存，因此，这里提出一种通过docker和openclash黑名单来实现BT流量绕过mihomo内核的方法。
 
-![GgDbCO0bUAAQGe1](https://s2.loli.net/2025/01/12/J5kvoOy9qdCEenG.jpg)
+![](https://s2.loli.net/2025/01/12/J5kvoOy9qdCEenG.jpg)
