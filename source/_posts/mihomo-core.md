@@ -17,13 +17,8 @@ categories:
 
 ## qbittorrent
 qbittorrent通过docker安装，推荐这个[镜像](https://hub.docker.com/r/superng6/qbittorrentee)。网络必须bridge。
-<p align="center">
-  <img src="../img/mihomo-core/image.png" alt="mihomo-core image">
-</p>
+![](../img/mihomo-core/image.png)
 
 ## openclash
 把qbittorrent这个docker的ip加入openclash的黑名单里，即可实现来自这个docker的流量全部绕开mihomo核心，虽然会损失一些DHT，但是比起动不动就要重启openclash，下载慢点也没啥。
 ![](../img/mihomo-core/image-1.png)
-<p align="center">
-  <img src="../img/mihomo-core/image-1.png" alt="mihomo-core image">
-</p>
