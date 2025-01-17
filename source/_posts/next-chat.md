@@ -1,7 +1,7 @@
 ---
 title: 【记录】部署Next Chat
 layout: post
-index_img: ../img/next-chat/image.png
+index_img: ../img/next-chat/image-10.png
 date: 2025-01-17 21:58:45
 tags:
   - OpenAI
@@ -13,7 +13,7 @@ categories:
 
 基于云服务器和域名，搭建一个随时可用的大模型api聊天UI，支持身份验证。
 
-![](../img/next-chat/image.png)
+![](../img/next-chat/image-10.png)
 
 ## 安装docker
 以下方式适用于Debian，请使用`sudo -i`切换到`root`用户进行操作。
@@ -113,27 +113,37 @@ docker-compose up -d
 
 ## 申请泛域名证书
 - 获取 cloudflare API 令牌，API 令牌模板选择【编辑区域 DNS】
+
 ![](../img/next-chat/image-1.png)
+
 - 记录下 dns_cloudflare_api_token
+
 - 进入NGPM管理页面，添加证书
+
 ![](../img/next-chat/image-2.png)
+
 ![](../img/next-chat/image-3.png)
 
 ## 添加身份验证
 - 添加 Access List
+
 ![](../img/next-chat/image-4.png)
 - 配置账号密码
+
 ![](../img/next-chat/image-5.png)
 
 ## 反代NextChat
 - 创建Proxy Hosts
+
 ![](../img/next-chat/image-6.png)
+
 ![](../img/next-chat/image-7.png)
 - 如果在Proxy Hosts中的Access List选中后，访问出现问题，请在 Advanced 里配置，详情可见[issue](https://github.com/NginxProxyManager/nginx-proxy-manager/issues/383)
 ```
 auth_basic            "Authorization required";
 auth_basic_user_file  /data/access/2;
 ```
+
 ![](../img/next-chat/image-8.png)
 
 ## DNS解析
