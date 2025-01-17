@@ -13,6 +13,7 @@ categories:
 
 基于云服务器和域名，搭建一个随时可用的大模型api聊天UI，支持身份验证。
 
+
 ![](../img/next-chat/image-10.png)
 
 ## 安装docker
@@ -157,7 +158,31 @@ auth_basic_user_file  /data/access/2;
 
 ![](../img/next-chat/image-8.png)
 
+- 修改`/api/openai`接口的 header
+
+![](../img/next-chat/image-11.png)
+
+```shell
+chunked_transfer_encoding off;
+proxy_buffering off;
+proxy_cache off;
+set $next_header $http_authorization;
+if ($http_authorization = "Basic <用户1>"){
+set $next_header "Bearer <用户1的key>";
+}
+if ($http_authorization = "Basic <用户2>"){
+set $next_header "Bearer <用户2的key>";
+}
+proxy_set_header Authorization $next_header;
+```
+<用户>是`Username:Password`的base64编码，<用户的key>是sk-xxxx。
+
 ## DNS解析
 如果想通过`nextchat.xxxx.xx`(xxxx.xx是你的域名)访问NextChat服务，请记得添加一条A记录。
 
 ![](../img/next-chat/image-9.png)
+
+## REFERENCE
+
+[使用one-api聚合Azure和OpenAI的API](https://hexo.limour.top/Aggregating-Azure-and-OpenAI-APIs-with-OneAPI)
+[部署 Nginx Proxy Manager](https://hexo.limour.top/Docker-bu-shu-Nginx-Proxy-Manager)
