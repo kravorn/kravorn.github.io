@@ -18,7 +18,7 @@ categories:
 ## 安装docker
 以下方式适用于Debian，请使用`sudo -i`切换到`root`用户进行操作。
 
-```
+```shell
 apt update
 apt upgrade -y
 apt install curl vim wget gnupg dpkg apt-transport-https lsb-release ca-certificates
@@ -38,7 +38,7 @@ chmod +x /usr/local/bin/docker-compose
 ### 修改docker配置
 限制日志文件大小，防止 Docker 日志塞满硬盘。
 
-```
+```shell
 cat > /etc/docker/daemon.json << EOF
 {
     "log-driver": "json-file",
@@ -50,16 +50,19 @@ cat > /etc/docker/daemon.json << EOF
 EOF
 ```
 然后重启docker
-```
+
+```shell
 systemctl restart docker
 ```
+
 最后创建一个网络
-```
+
+```shell
 docker network create ngpm
 ```
 
 ## 部署Nginx Proxy Manager
-```
+```yaml
 services:
   nginx-proxy-manager:
     image: 'docker.io/jc21/nginx-proxy-manager:latest'
@@ -77,16 +80,21 @@ networks:
     external: true
     name: ngpm
 ```
+
 然后运行
-```
+
+```shell
 docker-compose up -d
 ```
+
+最后，访问`http://your ip:81`即可进入Nginx Proxy Manager管理页面
+
 ### tip
 - 记得开放服务器的这些端口
 
 ## 部署NextChat
-懒得折腾，下面的配置只配置了 OpenRouter.ai 的 api 服务，如果需要聚合多平台的 api，可以参考这篇[记录](https://kravorn.github.io/2024/11/21/one-api-with-next-chat/)
-```
+懒得折腾，下面的配置只配置了`OpenRouter.ai`的 api 服务，如果需要聚合多平台的 api，可以参考这篇[记录](https://kravorn.github.io/2024/11/21/one-api-with-next-chat/)
+```yaml
 services:
   next-chat:
     environment:
@@ -106,7 +114,8 @@ networks:
 ```
 
 然后运行
-```
+
+```shell
 docker-compose up -d
 ```
 
@@ -118,7 +127,7 @@ docker-compose up -d
 
 - 记录下 dns_cloudflare_api_token
 
-- 进入NGPM管理页面，添加证书
+- 进入 Nginx Proxy Manager 管理页面，添加证书
 
 ![](../img/next-chat/image-2.png)
 
@@ -138,7 +147,9 @@ docker-compose up -d
 ![](../img/next-chat/image-6.png)
 
 ![](../img/next-chat/image-7.png)
-- 如果在Proxy Hosts中的Access List选中后，访问出现问题，请在 Advanced 里配置，详情可见[issue](https://github.com/NginxProxyManager/nginx-proxy-manager/issues/383)
+
+- 如果在Proxy Hosts中的Access List选中验证后，访问服务出现问题，请在 Advanced 里配置，详情可见[issue](https://github.com/NginxProxyManager/nginx-proxy-manager/issues/383)
+
 ```
 auth_basic            "Authorization required";
 auth_basic_user_file  /data/access/2;
