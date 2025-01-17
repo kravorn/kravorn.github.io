@@ -92,6 +92,7 @@ docker-compose up -d
 
 ### tip
 - 记得开放服务器的这些端口
+- 后面很多地方看起来我没填，其实只是我把敏感信息涂白了，大家操作的时候别忘填了
 
 ## 部署NextChat
 懒得折腾，下面的配置只配置了`OpenRouter.ai`的 api 服务，如果需要聚合多平台的 api，可以参考这篇[记录](https://kravorn.github.io/2024/11/21/one-api-with-next-chat/)
@@ -153,7 +154,7 @@ docker-compose up -d
 
 ```
 auth_basic            "Authorization required";
-auth_basic_user_file  /data/access/2;
+auth_basic_user_file  /data/access/1;
 ```
 
 ![](../img/next-chat/image-8.png)
