@@ -154,7 +154,7 @@ docker-compose up -d
 
 ```
 auth_basic            "Authorization required";
-auth_basic_user_file  /data/access/1; # 几个用户就写几
+auth_basic_user_file  /data/access/1; # 第几个access list就写几
 ```
 
 ![](../img/next-chat/image-8.png)
