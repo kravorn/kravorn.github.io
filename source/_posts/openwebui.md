@@ -11,7 +11,7 @@ categories:
   - 服务器
 ---
 
-抛弃NeatChat，拥抱OpenWebUI！
+拥抱OpenWebUI！
 
 
 ![](../img/openwebui/image.png)
