@@ -16,6 +16,10 @@ categories:
 
 ![](../img/next-chat/image-10.png)
 
+### update
+---
+建议换用neatchat，fork自nextchat，完全开源且功能更加强大，支持文件上传、RAG等。
+
 ## 安装docker
 以下方式适用于Debian，请使用`sudo -i`切换到`root`用户进行操作。
 
