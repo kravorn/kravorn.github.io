@@ -24,7 +24,7 @@ categories:
   - 不支持不同用户使用独立的api-key，好像开发者说这是有意为之
 
 - 优势：
-  - 自带功能丰富，支持文件全文上下文、文件RAG、知识库、联网搜索（当然其中很多neatchat也可以通过插件来实现，有的甚至比openwebui还要做得好，比如网页浏览）
+  - 自带功能丰富，支持文件全文上下文、文件RAG、知识库、联网搜索（当然其中很多功能neatchat也可以通过插件来实现，有的甚至比openwebui还要做得好，比如网页浏览）
   - 具有用户管理功能，这也是最吸引我的一点，不然只能通过http basic authentication来控制
 
 
@@ -58,15 +58,18 @@ openwebui的RAG性能一般，只能做为尝鲜
 
 
 ## 联网搜索
-个人做的联网搜索再怎么样也很难比过openai和gemini的，很难应用到实际生产中去
+个人做的联网搜索再怎么样也很难比过openai和gemini的，很难应用到实际生产中去。
+本次以谷歌PSE为例
 
 
 ## Token用量监控
-除非是自己一个人用，不然还是加上这个控制一下用量吧
+除非是自己一个人用，不然还是加上这个控制一下用量吧。
+跟着[部署流程](https://github.com/VariantConst/OpenWebUI-Monitor)走就好。
 
 
 ## 历史消息截断
-openwebui会带着所有的历史消息作为输入，累积下来这个token用量过于夸张
+openwebui会带着所有的历史消息作为输入，累积下来这个token用量过于夸张。
+https://openwebui.com/f/hub/context_clip_filter
 
 ## 反代
 ```yaml
